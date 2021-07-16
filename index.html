@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>место</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+  <header class="header page__section page__section_type_header">
+    <img
+      src="./images/header-logo.png"
+      alt="логотип_место"
+      class="header__logo">
+    <img src="./images/header-line.png"
+      alt="линия"
+      class="header__line">
+  </header>
+  <main class="content">
+    <section class="profile page__section page__section_type_profile">
+      <img
+        src="./images/profile-avatar.jpg"
+        alt="аватар"
+        class="profile__avatar">
+      <div class="profile__info">
+        <div class="profile__item">
+          <h1 class="profile__title">Жак-Ив Кусто</h1>
+          <button class="edit-button">
+            <img
+              src="./images/edit-button-vector.png"
+              alt="кнопка редактирования"
+              class="edit-button__image">
+          </button>
+        </div>
+        <h2 class="profile__subtitle">Исследователь океана</h2>
+      </div>
+      <button class="add-button">
+        <img
+          src="./images/profile-add-button-vector.png"
+          alt="кнопка добавления"
+          class="add-button__image">
+      </button>
+    </section>
+    <section class="elements page__section page__section_type_elements">
+      <ul class="cards">
+        <li class="cards__item">
+          <img
+            src="./images/elements-altai.jpg"
+            alt="Алтай"
+            class="cards__image">
+          <h2 class="cards__title">Алтай</h2>
+          <button class="button-like">
+            <img
+              src="./images/elements-vector-like.png"
+              alt="кнопка-нравится"
+              class="button-like__image">
+          </button>
+        </li>
+        <li class="cards__item">
+          <img
+            src="./images/elements-baikal.jpg"
+            alt="Байкал"
+            class="cards__image">
+          <h2 class="cards__title">Байкал</h2>
+          <button class="button-like">
+            <img
+              src="./images/elements-vector-like.png"
+              alt="кнопка-нравится"
+              class="button-like__image">
+          </button>
+        </li>
+        <li class="cards__item">
+          <img
+            src="./images/elements-demerji.jpg"
+            alt="гора Демерджи"
+            class="cards__image">
+          <h2 class="cards__title">гора Демерджи</h2>
+          <button class="button-like">
+            <img
+              src="./images/elements-vector-like.png"
+              alt="кнопка-нравится"
+              class="button-like__image">
+          </button>
+        </li>
+        <li class="cards__item">
+          <img
+            src="./images/elements-kazbek.jpg"
+            alt="гора Казбек"
+            class="cards__image">
+          <h2 class="cards__title">гора Казбек</h2>
+          <button class="button-like">
+            <img
+              src="./images/elements-vector-like.png"
+              alt="кнопка-нравится"
+              class="button-like__image">
+          </button>
+        </li>
+        <li class="cards__item">
+          <img
+            src="./images/elements-krim.jpg"
+            alt="Крым"
+            class="cards__image">
+          <h2 class="cards__title">Крым</h2>
+          <button class="button-like">
+            <img
+              src="./images/elements-vector-like.png"
+              alt="кнопка-нравится"
+              class="button-like__image">
+          </button>
+        </li>
+        <li class="cards__item">
+          <img
+            src="./images/elements-murmansk.jpg"
+            alt="Мурманск"
+            class="cards__image">
+          <h2 class="cards__title">Северное сияние</h2>
+          <button class="button-like">
+            <img
+              src="./images/elements-vector-like.png"
+              alt="кнопка-нравится"
+              class="button-like__image">
+          </button>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <section class="popup popup_opened">
+    <form class="popup__container">
+      <img
+        src="./images/popup-close-icon.png"
+        alt="иконка закрытия"
+        class="popup__close-icon">
+      <h2 class="popup__heading">Редактировать профиль</h2>
+      <fieldset class="popup__input">
+        <input
+          type="text"
+          class="popup__item popup__item_el_name"
+          id="name"
+          required>
+        <input
+          type="text"
+          class="popup__item popup__item_el_profession"
+          id="profession"
+          required>
+      </fieldset>
+      <button class="popup__handler">
+        <h3 class="popup__button">Сохранить</h3>
+      </button>
+    </form>
+  </section>
+  <footer class="footer page__section">
+    <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
+  </footer>
+</body>
+</html>

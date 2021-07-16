@@ -1,0 +1,17 @@
+.button-like {
+  padding: 0;
+  width: 22px;
+  height: 19px;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  align-self: center;
+  background-color: #FFFFFF;
+  border-style: none;
+  cursor: pointer;
+  transition: opasity .4s;
+}
+
+.button-like:hover {
+  opacity: 0.5;
+}
+

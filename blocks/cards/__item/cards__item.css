@@ -1,0 +1,8 @@
+.cards__item {
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 21px 1fr 22px 20px;
+  grid-template-rows: 282px 1fr;
+  height: 361px;
+  border-radius: 10px;
+}

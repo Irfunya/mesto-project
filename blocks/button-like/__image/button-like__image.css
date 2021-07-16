@@ -1,0 +1,7 @@
+.button-like__image {
+  border-style: none;
+}
+
+.button-like__image:active {
+  background-image: url(../../../images/elements-vector-like-active.png);
+}
