@@ -14,3 +14,4 @@
 _Версия языка: ru, en._
 _Internet browser: Google Chrome, Mozilla Firefox, Apple Safari, Opera, Internet Explorer._
 
+[https://irfunya.github.io/mesto-project/]
