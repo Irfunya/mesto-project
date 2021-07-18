@@ -6,4 +6,5 @@
   grid-row: 1/2;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  display: block;
 }

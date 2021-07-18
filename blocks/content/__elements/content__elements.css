@@ -1,9 +1,9 @@
-.page__section_type_elements {
+.content__elements {
   margin-bottom: 66px;
 }
 
 @media (max-width: 767px) {
-  .page__section_type_elements {
+  .content__elements {
     margin-bottom: 48px;
   }
 }

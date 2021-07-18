@@ -7,17 +7,16 @@
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
-  <header class="header page__section page__section_type_header">
-    <img
-      src="./images/header-logo.png"
-      alt="логотип_место"
-      class="header__logo">
-    <img src="./images/header-line.png"
-      alt="линия"
-      class="header__line">
+  <header class="header page__section page__header">
+    <div class="header__border">
+      <img
+        src="./images/header-logo.svg"
+        alt="логотип_место"
+        class="header__logo">
+    </div>
   </header>
   <main class="content">
-    <section class="profile page__section page__section_type_profile">
+    <section class="profile page__section content__profile">
       <img
         src="./images/profile-avatar.jpg"
         alt="аватар"
@@ -25,23 +24,21 @@
       <div class="profile__info">
         <div class="profile__item">
           <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <button class="edit-button">
-            <img
-              src="./images/edit-button-vector.png"
-              alt="кнопка редактирования"
-              class="edit-button__image">
+          <button
+            class="profile__edit-button"
+            type="button"
+            aria-label="редактировать">
           </button>
         </div>
-        <h2 class="profile__subtitle">Исследователь океана</h2>
+        <p class="profile__subtitle">Исследователь океана</p>
       </div>
-      <button class="add-button">
-        <img
-          src="./images/profile-add-button-vector.png"
-          alt="кнопка добавления"
-          class="add-button__image">
+      <button
+        class="profile__add-button"
+        type="button"
+        aria-label="добавить">
       </button>
     </section>
-    <section class="elements page__section page__section_type_elements">
+    <section class="elements page__section content__elements">
       <ul class="cards">
         <li class="cards__item">
           <img
@@ -49,11 +46,10 @@
             alt="Алтай"
             class="cards__image">
           <h2 class="cards__title">Алтай</h2>
-          <button class="button-like">
-            <img
-              src="./images/elements-vector-like.png"
-              alt="кнопка-нравится"
-              class="button-like__image">
+          <button
+            class="cards__button-like"
+            type="button"
+            aria-label="нравится">
           </button>
         </li>
         <li class="cards__item">
@@ -62,11 +58,10 @@
             alt="Байкал"
             class="cards__image">
           <h2 class="cards__title">Байкал</h2>
-          <button class="button-like">
-            <img
-              src="./images/elements-vector-like.png"
-              alt="кнопка-нравится"
-              class="button-like__image">
+          <button
+            class="cards__button-like"
+            type="button"
+            aria-label="нравится">
           </button>
         </li>
         <li class="cards__item">
@@ -75,11 +70,10 @@
             alt="гора Демерджи"
             class="cards__image">
           <h2 class="cards__title">гора Демерджи</h2>
-          <button class="button-like">
-            <img
-              src="./images/elements-vector-like.png"
-              alt="кнопка-нравится"
-              class="button-like__image">
+          <button
+            class="cards__button-like"
+            type="button"
+            aria-label="нравится">
           </button>
         </li>
         <li class="cards__item">
@@ -88,11 +82,10 @@
             alt="гора Казбек"
             class="cards__image">
           <h2 class="cards__title">гора Казбек</h2>
-          <button class="button-like">
-            <img
-              src="./images/elements-vector-like.png"
-              alt="кнопка-нравится"
-              class="button-like__image">
+          <button
+            class="cards__button-like"
+            type="button"
+            aria-label="нравится">
           </button>
         </li>
         <li class="cards__item">
@@ -101,11 +94,10 @@
             alt="Крым"
             class="cards__image">
           <h2 class="cards__title">Крым</h2>
-          <button class="button-like">
-            <img
-              src="./images/elements-vector-like.png"
-              alt="кнопка-нравится"
-              class="button-like__image">
+          <button
+            class="cards__button-like"
+            type="button"
+            aria-label="нравится">
           </button>
         </li>
         <li class="cards__item">
@@ -113,44 +105,52 @@
             src="./images/elements-murmansk.jpg"
             alt="Мурманск"
             class="cards__image">
-          <h2 class="cards__title">Северное сияние</h2>
-          <button class="button-like">
-            <img
-              src="./images/elements-vector-like.png"
-              alt="кнопка-нравится"
-              class="button-like__image">
+          <h2 class="cards__title">Мурманск: Северное сияние</h2>
+          <button
+            class="cards__button-like"
+            type="button"
+            aria-label="нравится">
           </button>
         </li>
       </ul>
     </section>
   </main>
-  <section class="popup page__section popup_opened">
-    <!-- для включения popup добавить модификатор "popup_opened" -->
-    <form class="popup__container">
-      <img
-        src="./images/popup-close-icon.png"
-        alt="иконка закрытия"
-        class="popup__close-icon">
-      <h2 class="popup__heading">Редактировать профиль</h2>
-      <fieldset class="popup__input">
-        <input
-          type="text"
-          class="popup__item popup__item_el_name"
-          id="name"
-          required>
-        <input
-          type="text"
-          class="popup__item popup__item_el_profession"
-          id="profession"
-          required>
-      </fieldset>
-      <button class="popup__handler">
-        <h3 class="popup__button">Сохранить</h3>
-      </button>
-    </form>
-  </section>
   <footer class="footer page__section">
     <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
   </footer>
+  <div class="popup popup_opened">
+    <!-- для включения popup добавить модификатор "popup_opened" -->
+    <div>
+      <form class="popup__container">
+        <button
+          class="popup__close-icon"
+          type="button"
+          aria-label="закрыть">
+        </button>
+        <h2 class="popup__heading">Редактировать профиль</h2>
+        <fieldset class="popup__input">
+          <input
+            type="text"
+            class="popup__item"
+            id="name"
+            name="name"
+            placeholder="имя"
+            required>
+          <input
+            type="text"
+            class="popup__item"
+            id="profession"
+            name="profession"
+            required
+            placeholder="о себе">
+        </fieldset>
+        <button
+          class="popup__handler"
+          type="button"
+          aria-label="сохранить">Сохранить
+        </button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

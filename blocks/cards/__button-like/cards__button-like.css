@@ -1,5 +1,9 @@
-.button-like {
+.cards__button-like {
+  background-image: url(../../../images/cards-button-like.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 0;
+  box-sizing: border-box;
   width: 22px;
   height: 19px;
   grid-column: 3/4;

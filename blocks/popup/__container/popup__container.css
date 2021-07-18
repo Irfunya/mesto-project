@@ -1,8 +1,5 @@
 .popup__container {
-  /* margin: 34px 36px 37px; */
-  margin: 195px auto;
   width: 430px;
-  height: 330px;
   background-color: #FFFFFF;
   border-radius: 10px;
   position: relative;
@@ -14,16 +11,6 @@
 
 @media (max-width: 767px) {
   .popup__container {
-    margin: 123px auto;
     width: 282px;
-    height: 322px;
-  }
-}
-
-@media (max-width: 767px) {
-  .popup__container {
-    margin: 123px auto;
-    width: 282px;
-    height: 322px;
   }
 }
