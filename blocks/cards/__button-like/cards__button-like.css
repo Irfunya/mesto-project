@@ -2,12 +2,13 @@
   background-image: url(../../../images/cards-button-like.svg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 100%;
   padding: 0;
   box-sizing: border-box;
   width: 22px;
   height: 19px;
   grid-column: 3/4;
-  grid-row: 2/3;
+  grid-row: 4;
   align-self: center;
   background-color: #FFFFFF;
   border-style: none;

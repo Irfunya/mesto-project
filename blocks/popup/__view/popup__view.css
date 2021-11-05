@@ -1,0 +1,12 @@
+.popup__view {
+  margin: 0;
+  height: 562px;
+  min-width: 433px;
+  max-width: 816px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+.popup__view {
+  max-width: 299px;
+}
