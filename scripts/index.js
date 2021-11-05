@@ -5,6 +5,24 @@ const popupElement = document.querySelector('.popup');
 const popupEditElement = document.querySelector('.popup_type_edit');
 const popupEditCloseButtonElement = popupEditElement.querySelector('.popup__close-icon');
 
+// определяем формы заполнения popup_type_edit
+const formEditElement = popupEditElement.querySelector('.popup__form');
+const inputNameElement = formEditElement.querySelector('.popup__input_el_name');
+const inputJobElement = formEditElement.querySelector('.popup__input_el_job');
+const profileNameElement = content.querySelector('.profile__title');
+const profileJobElement = content.querySelector('.profile__subtitle');
+
+// определяем popup_type_add
+const popupAddButtonElement = content.querySelector('.profile__add-button');
+const popupAddElement = document.querySelector('.popup_type_add');
+const popupAddCloseButtonElement = popupAddElement.querySelector('.popup__close-icon');
+
+// определяем формы заполнения popup_type_add
+const formEddElement = popupAddElement.querySelector('.popup__form');
+const title = formEddElement.querySelector('.popup__input_el_title');
+const link = formEddElement.querySelector('.popup__input_el_link');
+
+
 
 // создаем функцию по открытию/закрытию
 const openPopup = (popupElement) => {
@@ -14,26 +32,6 @@ const openPopup = (popupElement) => {
 const closePopup = (popupElement) => {
   popupElement.classList.remove('popup_opened');
 }
-
-
-// вешаем слушатели на открытие/закрытие
-popupEditButtonElement.addEventListener('click', (evt) => {
-  openPopup(popupEditElement);
-});
-
-popupEditCloseButtonElement.addEventListener('click', (evt) => {
-  console.log(evt)
-  closePopup(popupEditElement);
-});
-
-
-// определяем формы заполнения popup_type_edit
-const formEditElement = popupEditElement.querySelector('.popup__form');
-const inputNameElement = formEditElement.querySelector('.popup__input_el_name');
-const inputJobElement = formEditElement.querySelector('.popup__input_el_job');
-const profileNameElement = content.querySelector('.profile__title');
-const profileJobElement = content.querySelector('.profile__subtitle');
-
 
 // создаем функцию по заполнению форм popup_type_edit
 const submitFormEditHandler = (evt) => {
@@ -46,11 +44,15 @@ const submitFormEditHandler = (evt) => {
 formEditElement.addEventListener('submit', submitFormEditHandler);
 
 
-// определяем popup_type_add
-const popupAddButtonElement = content.querySelector('.profile__add-button');
-const popupAddElement = document.querySelector('.popup_type_add');
-const popupAddCloseButtonElement = popupAddElement.querySelector('.popup__close-icon');
 
+// вешаем слушатели на открытие/закрытие
+popupEditButtonElement.addEventListener('click', (evt) => {
+  openPopup(popupEditElement);
+});
+
+popupEditCloseButtonElement.addEventListener('click', (evt) => {
+  closePopup(popupEditElement);
+});
 
 // вешаем слушатели на открытие/закрытие
 popupAddButtonElement.addEventListener('click', (evt) => {
@@ -62,10 +64,6 @@ popupAddCloseButtonElement.addEventListener('click', (evt) => {
 });
 
 
-// определяем формы заполнения popup_type_add
-const formEddElement = popupAddElement.querySelector('.popup__form');
-const title = formEddElement.querySelector('.popup__input_el_title');
-const link = formEddElement.querySelector('.popup__input_el_link');
 
 // инициализируем обёртку
 const wrapElement = document.querySelector('.cards');
@@ -152,8 +150,7 @@ const submitFormAddHandler = (evt) => {
 
   closePopup(popupAddElement);
 
-  title.value = '';
-  link.value = '';
+  formEddElement.reset();
 };
 
 
@@ -161,4 +158,3 @@ const submitFormAddHandler = (evt) => {
 initialCards.forEach((item) => renderCardElement(item, wrapElement));
 
 formEddElement.addEventListener('submit', submitFormAddHandler);
-
