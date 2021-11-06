@@ -22,6 +22,10 @@ const formEddElement = popupAddElement.querySelector('.popup__form');
 const title = formEddElement.querySelector('.popup__input_el_title');
 const link = formEddElement.querySelector('.popup__input_el_link');
 
+// определяем формы заполнения popup_type_view
+const popupViewElement = document.querySelector('.popup_type_view');
+const popupViewCloseButtonElement = popupViewElement.querySelector('.popup__close-icon');
+
 
 
 // создаем функцию по открытию/закрытию
@@ -54,13 +58,16 @@ popupEditCloseButtonElement.addEventListener('click', (evt) => {
   closePopup(popupEditElement);
 });
 
-// вешаем слушатели на открытие/закрытие
 popupAddButtonElement.addEventListener('click', (evt) => {
   openPopup(popupAddElement);
 });
 
 popupAddCloseButtonElement.addEventListener('click', (evt) => {
   closePopup(popupAddElement);
+});
+
+popupViewCloseButtonElement.addEventListener('click', (evt) => {
+  closePopup(popupViewElement);
 });
 
 
@@ -111,8 +118,6 @@ const renderCardElement = (data, wrapElement) => {
 const getCardElement = ({ name, link }) => {
   const cardTemplate = document.querySelector('.card-template').content;
   const cardElement = cardTemplate.querySelector('.cards__item').cloneNode(true);
-  const popupViewElement = document.querySelector('.popup_type_view');
-  const popupViewCloseButtonElement = popupViewElement.querySelector('.popup__close-icon');
 
   cardElement.querySelector('.cards__image').src = link;
   cardElement.querySelector('.cards__image').alt = name;
@@ -131,10 +136,6 @@ const getCardElement = ({ name, link }) => {
     popupViewElement.querySelector('.popup__view-image').alt = name;
     popupViewElement.querySelector('.popup__view-caption').textContent = name;
     openPopup(popupViewElement);
-  });
-
-  popupViewCloseButtonElement.addEventListener('click', (evt) => {
-    closePopup(popupViewElement);
   });
 
   return cardElement;
